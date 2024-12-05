@@ -52,6 +52,9 @@ a {
 }
 
 /* Темна тема */
+.dark-theme header {
+  background-color: #343a40;
+}
 .dark-theme .navbar .dropdown-menu {
   background-color: #343a40;
   color: #ffffff;
@@ -70,8 +73,10 @@ a {
 .dark-theme .navbar .dropdown-menu .dropdown-item {
   background-color: #343a40;
   color: #ffffff;
+  border-radius: 0;
 }
 
 .navbar .dropdown-divider {
   border-top: 0.5px solid #2b90d9
 }
+
