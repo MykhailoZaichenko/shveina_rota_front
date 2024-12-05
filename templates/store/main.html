@@ -1,17 +1,122 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block head %}
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-{% endblock head %}
-{% block content %}
-{#    <div class="wrapper">#}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Швейна рота</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="/static/useful_things_for_front/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/useful_things_for_front/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="/static/useful_things_for_front/nouislider/nouislider.min.css'">
+    <link rel="stylesheet" href="/static/useful_things_for_front/bootstrap-select/css/bootstrap-select.min.css'">
+    <link rel="stylesheet" href="/static/useful_things_for_front/owl.carousel2/assets/owl.carousel.min.css'">
+    <link rel="stylesheet" href="/static/useful_things_for_front/owl.carousel2/assets/owl.theme.default.css'">
+    <link rel="stylesheet" href="/static/css/custom.css'">
+    <!-- navbar -->
+    <link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/button_back_col.css' %}" rel="stylesheet" type="text/css">
+    <!-- navbar -->
+    <link rel="stylesheet" href="/static/css/style.blue.css" id="theme-stylesheet">
+    <link rel="shortcut icon" href="/static/icons/favicon.png'">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    
+</head>
+<body>
+    <div class="page-holder">
+        <header>
+            <div class="container px-0 px-lg-3">
+                <nav class="navbar navbar-expand-lg py-3 px-lg-0">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'store:home' %}"><img src="/static/icons/favicon.png" alt="Швейна рота"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'store:main' %}">Як обрати?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'store:home' %}">Головна</a>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#"
+                                                             data-toggle="dropdown" aria-haspopup="true"
+                                                             aria-expanded="false">Крамниця</a>
+                                <div class="dropdown-menu mt-3" aria-labelledby="pagesDropdown">
+                                    {% cache 604800 categorie_list %}
+                                        {% if categories_menu %}
+                                            {% for cat_menu in categories_menu %}
+                                                <a class="dropdown-item border-0 transition-link"
+                                                   href="{% url 'store:category-products' cat_menu.slug %}">{{ cat_menu.title }}</a>
+                                            {% endfor %}
+                                        {% endif %}
+                                    {% endcache %}
+                                    <hr>
+                                    <a class="dropdown-item border-0 transition-link"
+                                       href="{% url 'store:all-categories' %}">Всі категорії</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'store:contacts' %}">{% trans "Контакти" %}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'store:about' %}"> {% trans "Про нас" %}</a>
+                            </li>
+                            <li>
+                                <div id="toggle-theme" class="btn btn-primary">🌣</div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            {% if request.user.is_authenticated %}
+                                <li class="nav-item"><a class="nav-link" href="{% url 'store:cart' %}"> <i
+                                        class="fas fa-dolly-flatbed mr-1 text-gray"></i>Кошик<small
+                                        class="text-gray">({{ cart_items.count }})</small></a></li>
+        
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#"
+                                                                 data-toggle="dropdown" aria-haspopup="true"
+                                                                 aria-expanded="false"><i class="fas fa-user-alt mr-1
+                                                           text-gray"></i>{{ your_account }}</a></a>
+        
+                                    <div class="dropdown-menu mt-3" aria-labelledby="pagesDropdown">
+        
+                                        <a class="dropdown-item border-0 transition-link"
+                                           href="{% url 'store:profile' %}"> Профіль</a>
+                                        <a class="dropdown-item border-0 transition-link"
+                                           href="{% url 'store:cart' %}">Кошик</a>
+                                        <a class="dropdown-item border-0 transition-link"
+                                           href="{% url 'store:orders' %}">Замовлення</a>
+                                        <a class="dropdown-item border-0 transition-link" href="
+        {% url 'store:password-change' %}">  Змінити пароль</a>
+        
+                                        <hr>
+                                        <a class="dropdown-item border-0 transition-link"
+                                           href="{% url 'store:logout' %}">Вийти</a>
+                                    </div>
+                                </li>
+                            {% else %}
+                                <li class="nav-item"><a class="nav-link" href="{% url 'store:login' %}">Увійти</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link"
+                                                        href="{% url 'store:register' %}">Створити акаунт</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
         <div class="container">
             <h1 itemprop="headline">Як обрати велосипед?</h1>
             <div class="row">
-                {#                Todo If you need to add ads on the sides of the site#}
-                {#                <div class="col-md-2">#}
-                {#                    <img src="{% static 'img/banner.jpg' %}" class="img-fluid" alt="Left Image">#}
-                {#                </div>#}
                 <div class="col-md-8">
                     <div itemprop="text">
                         <!-- begining -->
@@ -277,11 +382,10 @@
                         </div>
                     </div>
                 </div>
-                {#                Todo If you need to add ads on the sides of the site#}
-                {#                <div class="col-md-2">#}
-                {#                    <img src="{% static 'img/banner.jpg' %}" class="img-fluid" alt="Right Image">#}
-                {#                </div>#}
             </div>
         </div>
     </div>
-{% endblock content %}
+    <script src="/static/js/button_back_col.js" type="text/javascript"></script>
+</div>
+</body>
+</html>

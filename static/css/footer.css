@@ -1,44 +1,81 @@
-/* Change background color and text color of footer */
+/* Загальний стиль футера */
 footer {
-    padding-top: 50px;
+    padding: 40px 0;
     background-color: #262626;
-    color: #938f8f;
+    color: #d1d1d1;
+    font-size: 0.9rem;
 }
 
-/* Style the headings in the footer */
-footer h3 {
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+/* Заголовки футера */
+.footer-title {
     font-size: 1.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
-/* Style the contact information in the footer */
-footer p {
-    margin-bottom: 0.5rem;
+/* Опис під заголовком */
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* Style the credits section */
-.credits {
-    margin-top: 2rem;
-    font-size: 0.8rem;
+/* Контактна інформація */
+.footer-contact li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
 }
 
-/* Align the "website made by" text to the right */
-.credits .text-lg-right {
-    text-align: right;
+.footer-contact i {
+    margin-right: 8px;
+    color: #f4a261;
 }
 
-/* Style the "website made by" link */
-.credits a {
-    color: #fff;
+/* Посилання у футері */
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links li a {
+    font-size: 0.9rem;
+    color: #d1d1d1;
+}
+
+/* Низ футера */
+footer .small {
+    color: #9a9a9a;
+}
+
+footer .text-lg-right a {
     text-decoration: underline;
 }
 
-/* Add some spacing between the links in the "Посилання" section */
-footer ul li {
-    margin-bottom: 0.5rem;
+/* Стиль для тексту в футері */
+footer .footer-text {
+    color: #bfbfbf; /* Світло-сірий колір для хорошого контрасту */
+    font-size: 0.875rem; /* Трохи збільшений шрифт для зручного читання */
 }
 
-/* Add a hover effect to the links in the "Посилання" section */
-footer ul li a:hover {
-    text-decoration: underline;
+footer .footer-text a {
+    color: #f4a261; /* Акцентний колір для посилання */
+    text-decoration: none;
+    transition: color 0.3s;
 }
+
+footer .footer-text a:hover {
+    color: #bfbfbf; /* Білий колір при наведенні */
+}
+
