@@ -22,7 +22,7 @@
     <!-- footer -->
     <link rel="stylesheet" href="/static/css/style.blue.min.css" id="theme-stylesheet">
     <!-- index -->
-    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/posts.css">
     <!-- index -->
     <link rel="shortcut icon" href="/static/icons/favicon.png">
     <link rel="stylesheet"
@@ -59,9 +59,14 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">Публікації</a>
                                 <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-                                    <li><a class="dropdown-item" href="/posts-id.html">Пупалупа1</a></li>
-                                    <li><a class="dropdown-item" href="/posts-id.html">Пупалупа2</a></li>
-                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="/posts-id.html">Одяг</a></li>
+                                    <li><a class="dropdown-item" href="/posts-id.html">Аксесуари</a></li>
+                                    <li><a class="dropdown-item" href="/posts-id.html">Взуття</a></li>
+                                    <li><a class="dropdown-item" href="/posts-id.html">Спец. приладдя</a></li>
+                                    <li><a class="dropdown-item" href="/posts-id.html">Інше</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
                                     <li><a class="dropdown-item" href="/posts.html">Всі категорії</a></li>
                                 </ul>
                             </li>
@@ -79,7 +84,7 @@
                                     <li><a class="dropdown-item" href="/profile.html">Профіль</a></li>
                                     <li><a class="dropdown-item" href="/add-article.html">Додати публікацію</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><button id="toggle-theme" class="dropdown-item" style="border-radius: 0;"></li>
+                                    <li><button id="toggle-theme" class="dropdown-item" style="border-radius: 0;">Змінити тему</button></li>
                                     <li><a class="dropdown-item" href="/">Вийти</a></li>
                                 </ul>
                             </li>
@@ -92,7 +97,90 @@
         </header>
     </div>
               
-        
+    <div class="container py-5">
+        <div class="row">
+            <!-- Ліва панель: Категорії -->
+            <div class="col-md-3">
+                <h4 class="mb-4">Категорії</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="#" class="text-decoration-none"><strong>Одяг</strong></a>
+                        <ul class="list-unstyled ps-3 mt-2">
+                            <li><a href="#" class="text-decoration-none">Куртки</a></li>
+                            <li><a href="#" class="text-decoration-none">Футболки</a></li>
+                            <li><a href="#" class="text-decoration-none">Світшоти</a></li>
+                            <li><a href="#" class="text-decoration-none">Штани</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-decoration-none"><strong>Аксесуари</strong></a>
+                        <ul class="list-unstyled ps-3 mt-2">
+                            <li><a href="#" class="text-decoration-none">Шапки</a></li>
+                            <li><a href="#" class="text-decoration-none">Рукавиці</a></li>
+                            <li><a href="#" class="text-decoration-none">Шкарпетки</a></li>
+                            <li><a href="#" class="text-decoration-none">Спідня білизна</a></li>
+                            <li><a href="#" class="text-decoration-none">Торбинки</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-decoration-none">Взуття</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-decoration-none">Спец приладдя</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-decoration-none">Інше</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Права панель: Публікації -->
+            <div class="col-md-9 mt-4 mt-md-0">
+                <h4 class="mb-4">Публікації</h4>
+                <!-- Публікації від адміна -->
+                <h5 class="mb-3">Від Швейна рота</h5>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-md-4">
+                        <a href="#" class="post-card">
+                            <div class="image-wrapper shadow-sm">
+                                <img src="/static/img/sitka.jpg" alt="Admin Post 2">
+                                <div class="overlay">Рекомендовано</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="#" class="post-card">
+                            <div class="image-wrapper shadow-sm">
+                                <img src="/static/img/sitka.jpg" alt="Admin Post 2">
+                                <div class="overlay">Рекомендовано</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <hr class="my-5">
+                <!-- Публікації від звичайних користувачів -->
+                <h5 class="mb-3">Від звичайних користувачів</h5>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-md-4">
+                        <a href="#" class="post-card">
+                            <div class="image-wrapper shadow-sm">
+                                <img src="/static/img/sitka.jpg" alt="User Post 1">
+                                <div class="overlay">Пост користувача</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="#" class="post-card">
+                            <div class="image-wrapper shadow-sm">
+                                <img src="/static/img/sitka.jpg" alt="User Post 2">
+                                <div class="overlay">Пост користувача</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
         
     <footer class="bg-dark text-white py-4 mt-auto">
         <div class="container">

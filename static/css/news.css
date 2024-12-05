@@ -1,0 +1,41 @@
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-wrapper img {
+    transition: transform 0.3s, filter 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.image-wrapper .overlay {
+    position: absolute;
+    bottom: 10%; /* Текст трохи нижче */
+    left: 10%;  /* Відступ зліва */
+    right: 10%; /* Відступ справа */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Трохи темніше */
+    color: rgba(255, 255, 255, 0.8); /* Менша яскравість тексту */
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px; /* Згладжені кути накладення */
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(10px); /* Початковий ефект підйому */
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.1);
+    filter: blur(2px);
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+    transform: translateY(0); /* Плавний підйом до місця */
+}
+
+.post-card {
+    text-decoration: none;
+}
