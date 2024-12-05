@@ -1,0 +1,42 @@
+
+/* Стилізація пошукового блоку */
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar .form-control {
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.search-bar .form-control:focus {
+    border: 1px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-bar .btn {
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar .btn:hover {
+    background-color: #0044ff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.page-holder {
+    flex-grow: 1;
+}
+footer {
+    background: #333;
+    color: #fff;
+}

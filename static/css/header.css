@@ -44,3 +44,34 @@ a {
     border-radius: 10px;
 
 }
+
+/* Стандартна світла тема */
+.navbar .dropdown-menu {
+  /* background-color: #ffffff; */
+  color: #000000;
+}
+
+/* Темна тема */
+.dark-theme .navbar .dropdown-menu {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.dark-theme .navbar .dropdown-menu button:hover {
+  color: #adb5bd;
+  background-color: #495057;
+}
+
+.dark-theme .navbar .dropdown-menu a:hover {
+  color: #adb5bd;
+  background-color: #495057;
+}
+
+.dark-theme .navbar .dropdown-menu .dropdown-item {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.navbar .dropdown-divider {
+  border-top: 0.5px solid #2b90d9
+}
