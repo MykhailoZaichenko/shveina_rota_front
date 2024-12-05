@@ -1,0 +1,41 @@
+{% load static %}
+{% load i18n %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+{% endblock head %}
+<footer class="bg-dark text-white" style="margin-top: auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h3>{% trans 'Вело Магазин' %}</h3>
+                <p>{% trans 'Ми - вело магазином з великим досвідом. Наші фахівці допоможуть вам підібрати потрібний велосипед, зробити його налаштування та ремонт.' %}</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3>{% trans 'Контакти' %}</h3>
+                <ul>
+                    <li><p>{% trans 'Адреса: м.Дніпро, вул. Бебра, 123' %}</p></li>
+                    <li>{% trans 'Телефон: +380 98 493 00 74' %}</li>
+                    <li><p>{% trans 'Пошта' %} <a href="https://mail.google.com/" target="_blank">michailo.zaichenko@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3>{% trans 'Посилання' %}</h3>
+                <ul>
+                    <li><a class="nav-link active" href="{% url 'store:main' %}">{% trans 'Головна' %} </a></li>
+                    <li><a class="nav-link active" href="{% url 'store:home' %}"> {% trans 'Каталог' %}</a></li>
+                    <li><a class="nav-link" href="{% url 'store:contacts' %}">{% trans 'Контакти' %} </a></li>
+                    <li><a class="nav-link" href="{% url 'store:about' %}">{% trans 'Про нас' %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="credits">
+        <p>© 2023 {% trans 'Вело Магазин' %}</p>
+    </div>
+    <div class="col-lg-6 text-lg-right">
+        <p class="small text-muted mb-0">{% trans 'Сайт зроблений' %} <a class="text-white reset-anchor"
+                                                           href="https://www.linkedin.com/in/michailo-zaichenko-a90048266/"
+                                                           target="_blank">{% trans 'Михайлом Зайченко' %}</a></p>
+    </div>
+</footer>

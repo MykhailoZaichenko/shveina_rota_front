@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block metatitle %}Wellbike{% endblock metatitle %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+{#    Todo Bootstrap CSS#}
+    <link rel="stylesheet" href="{% static 'useful_things_for_front/bootstrap/css/bootstrap.min.css' %}">
+{#    Todo Lightbox#}
+    <link rel="stylesheet" href="{% static 'useful_things_for_front/lightbox2/css/lightbox.min.css' %}">
+{#    Todo Range slider#}
+    <link rel="stylesheet" href="{% static 'useful_things_for_front/nouislider/nouislider.min.css' %}">
+{#    Todo Bootstrap select#}
+    <link rel="stylesheet" href="{% static 'useful_things_for_front/bootstrap-select/css/bootstrap-select.min.css' %}">
+{#    Todo Owl Carousel#}
+    <link rel="stylesheet" href="{% static 'useful_things_for_front/owl.carousel2/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'useful_things_for_front/owl.carousel2/assets/owl.theme.default.css' %}">
+{#    Todo Google fonts#}
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+{#    Todo theme stylesheet#}
+    <link rel="stylesheet" href="{% static 'css/style.gold.css' %}" id="theme-stylesheet">
+{#    Todo Favicon#}
+    <link rel="shortcut icon" href="{% static 'icons/favicon.png' %}">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+{#    Todo place for custom css#}
+{% block head %}
+
+{% endblock head %}
+</head>
+<body>
+<div class="page-holder">
+    {% include 'navbar.html' %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+    {% block payment-gateway %}{% endblock payment-gateway %}
+    {% include 'footer.html' %}
+{#    {% if acceptedCookie == True %}#}
+    {% include 'cookie.html' %}
+{#    {% else %}#}
+{#    <br>#}
+{#    {% endif %}#}
+    {% include 'scripts.html' %}
+{#    Todo place for custom scripts#}
+    {% block script %}{% endblock script%}
+</div>
+</body>
+</html>
