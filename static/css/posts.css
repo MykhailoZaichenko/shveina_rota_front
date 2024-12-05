@@ -40,3 +40,38 @@
 .post-card {
     text-decoration: none;
 }
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Загальні стилі для темної теми */
+.dark-theme {
+    background-color: #343a40; /* Сірий фон */
+    color: #f8f9fa; /* Світлий текст */
+}
+
+.dark-theme .list-group-item {
+    background-color: #495057; /* Трохи світліший сірий */
+    color: #f8f9fa;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover для категорій у темній темі */
+.dark-theme .list-group-item:hover {
+    background-color: #6c757d; /* Ще світліший сірий */
+    color: #ffffff; /* Яскраво-білий текст */
+}
+
+/* Hover для посилань */
+.dark-theme .list-group-item a {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dark-theme .list-group-item a:hover {
+    color: #21a2b8; /* Жовтий колір для виділення */
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
+
