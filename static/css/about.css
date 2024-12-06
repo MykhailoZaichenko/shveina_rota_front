@@ -55,3 +55,34 @@
 .section a:hover {
     color: #ffffff;
 }
+
+.btn-main {
+    background-color: #007bff; /* Основний синій колір */
+    color: white; /* Білий текст */
+    border: 2px solid #007bff; /* Синій border */
+    border-radius: 5px; /* Злегка закруглені кути */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    text-decoration: none; /* Прибираємо підкреслення */
+    transition: 0.3s ease-in-out; /* Анімація змін */
+}
+
+.btn-main:hover {
+    background-color: #0056b3; /* Темніший синій при наведенні */
+    color: white; /* Білий текст залишається */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); /* Додаємо тінь */
+    transform: scale(1.05); /* Невелике збільшення */
+}
+
+.partner-logo, .rounded-circle {
+    border-radius: 10%; /* Закруглення картинок */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 5%;
+    max-height:300px
+}
+
+.partner-logo {
+    max-width: 50px;
+}

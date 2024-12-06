@@ -24,7 +24,7 @@
     <!-- index -->
     <link rel="stylesheet" href="/static/css/index.css">
     <!-- index -->
-    <link rel="shortcut icon" href="/static/icons/favicon.png">
+    <link rel="shortcut icon" href="/static/icons/favicon.ico">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet"
@@ -39,7 +39,8 @@
             <div class="container px-0 px-lg-3">
                 <nav class="navbar navbar-expand-lg custom-navbar py-3 px-lg-0">
                     <!-- Лого -->
-                    <a class="navbar" href="/">
+                    <a class="navbar d-flex align-items-center text-dark text-decoration-none" href="/">
+                        <div class="fs-5 d-none d-md-block mr-3">Швейна Рота</div>
                         <img 
                             src="/static/icons/favicon.png" 
                             alt="Швейна рота" 
@@ -75,29 +76,18 @@
                     </button>
                     <!-- Меню на великих екранах -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
+                        <ul class="navbar-nav me-auto ml-3">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="/">Головна</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="/news.html">Новини</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">Публікації</a>
-                                <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
-                                    <li><a class="dropdown-item" href="/posts-id.html">Одяг</a></li>
-                                    <li><a class="dropdown-item" href="/posts-id.html">Аксесуари</a></li>
-                                    <li><a class="dropdown-item" href="/posts-id.html">Взуття</a></li>
-                                    <li><a class="dropdown-item" href="/posts-id.html">Спец. приладдя</a></li>
-                                    <li><a class="dropdown-item" href="/posts-id.html">Інше</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="/posts.html">Всі категорії</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/posts.html">Майстер класи</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/about.html">Про проект</a>
+                                <a class="nav-link" href="/about.html">Про нас</a>
                             </li>
                         </ul>
                         <hr class="dropdown-divider mt-2 mb-2">
@@ -133,12 +123,12 @@
                                 <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                                     <li>
                                         <a class="dropdown-item" href="#" id="ukrainian">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="UA" width="20" class="me-2"> Українська
+                                            <img src="/static/img/Flag_of_Ukraine.png" alt="UA" width="20" class="me-2"> Українська
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#" id="english">
-                                            <img src="https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-2).svg" alt="EN" width="20" class="me-2"> English
+                                            <img src="/static/img/Flag_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
                                         </a>
                                     </li>
                                 </ul>
