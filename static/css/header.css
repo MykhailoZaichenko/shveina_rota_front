@@ -47,7 +47,6 @@ a {
 
 /* Стандартна світла тема */
 .navbar .dropdown-menu {
-  /* background-color: #ffffff; */
   color: #000000;
 }
 
@@ -140,4 +139,63 @@ a {
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 767px) {
+  .navbar .img-fluid {
+    width: 50px; /* Задаємо бажану ширину для зображення */
+    height: 50px; /* Задаємо бажану висоту для зображення */
+  }
+  
+  /* Зробити лого тільки зображенням без тексту */
+  .navbar a {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Стилі для тексту в секціях */
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Для планшетів */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar .nav-link {
+    font-size: 16px; /* Зменшуємо розмір шрифту на планшетах */
+}
+
+.navbar .img-fluid {
+    width: 40px; /* Зменшуємо розмір лого для планшетів */
+    height: 40px;
+}
+
+/* Стилі для хедера */
+.navbar a {
+    display: flex;
+}
+
+.navbar .nav-link {
+    margin-left: 15px; /* Додаємо відступ між лого та текстом */
+}
+
+.navbar .d-flex {
+    justify-content: flex-start; /* Вирівнюємо лого та текст в одну лінію */
+    width: auto; /* Встановлюємо автоширину */
+}
+
+/* Якщо текст в заголовку все ж перевищує ширину */
+.navbar .nav-link {
+    white-space: nowrap; /* Уникаємо переносу тексту */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Додаємо три крапки, якщо текст не вміщується */
+}
+
+  h2, h3 {
+    font-size: 1.4rem; /* Збільшуємо розмір тексту */
+  }
 }

@@ -1,4 +1,3 @@
-
 /* Стилізація пошукового блоку */
 .search-bar {
     margin-top: 20px;
@@ -39,4 +38,159 @@ body {
 footer {
     background: #333;
     color: #fff;
+}
+
+/* Загальний стиль секцій */
+.section {
+    gap: 2rem;
+    flex-wrap: wrap; /* Для адаптації на менших екранах */
+}
+.section .content {
+    flex: 1;
+    padding: 1rem;
+}
+.section .image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    max-width: 500px; /* Обмеження максимального розміру зображення */
+    margin: 0 auto; /* Центрування зображень */
+}
+.section .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.section .section-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Довший час для плавності */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Легка тінь */
+}
+.section .image:hover .section-image {
+    transform: scale(1.1); /* Помітніше збільшення */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Глибша тінь */
+}
+
+/* Відступ від футера */
+.container {
+    margin-bottom: 3rem;
+}
+
+/* Посилання */
+.section a {
+    color: #f4a261;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+.section a:hover {
+    color: #ffffff;
+}
+
+.btn-main {
+    background-color: #007bff; /* Основний синій колір */
+    color: white; /* Білий текст */
+    border: 2px solid #007bff; /* Синій border */
+    border-radius: 5px; /* Злегка закруглені кути */
+    padding: 10px 20px; /* Відступи всередині кнопки */
+    text-decoration: none; /* Прибираємо підкреслення */
+    transition: 0.3s ease-in-out; /* Анімація змін */
+}
+
+.btn-main:hover {
+    background-color: #0056b3; /* Темніший синій при наведенні */
+    color: white; /* Білий текст залишається */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); /* Додаємо тінь */
+    transform: scale(1.05); /* Невелике збільшення */
+}
+
+.partner-logo, .rounded-circle {
+    border-radius: 10%; /* Закруглення картинок */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 5%;
+    max-height:300px
+}
+
+.partner-logo {
+    max-width: 50px;
+}
+
+/* Carusel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .carousel-images {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  .carousel-images img {
+    width: calc(100% / 3);
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 5px;
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+  }
+
+  .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(216, 214, 214);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .carousel-indicators .active {
+    background-color: black;
+    border: 1px solid white;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    width: 12%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+/* Map */
+#map {
+    height: 500px; width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
 }
